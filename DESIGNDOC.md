@@ -13,7 +13,7 @@ This document exists to record progress made on my project for Arch. It should b
 
 ### 1.2 Scope
 
-Provide an overview of the system, its objectives, and what it will and will not do.
+The project itself will be a linear regression model for stock market prediction, specifically Google's stock prices, based off of a data set containing Google stock prices from 2004 to today.
 
 ### 1.3 Definitions, Acronyms, and Abbreviations
 
