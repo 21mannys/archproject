@@ -13,23 +13,27 @@ This document exists to record progress made on my project for Arch. It should b
 
 ### 1.2 Scope
 
-The project itself will be a linear regression model for stock market prediction, specifically Google's stock prices, based off of a data set containing Google stock prices from 2004 to today.
+The project itself will be a linear regression model for stock market prediction, specifically Google's (GOOGL) stock prices, trained and evaluated based off of a data set containing Google stock prices from 2004 to today.
 
 ### 1.3 Definitions, Acronyms, and Abbreviations
 
 List and define any terms, acronyms, or abbreviations used in this document.
 
 ### 1.4 References
-
-List any documents or sources referenced in this design.
-
+[IBM - What is Linear Regression?](https://www.ibm.com/think/topics/linear-regression)<br/>
+[Kaggle API Documentation](https://www.kaggle.com/docs/api)<br/>
+[Scikit-learn User Guide (Linear Models)](https://scikit-learn.org/stable/modules/linear_model.html)<br/>
 ### 1.5 Overview
 
-Brief description of what the rest of the document contains.
+The rest of this document will explain the architechural design of my Google Sock Price Predictive Model. The __System Overview__ will outline the components that make up the system and how they interact with one another. __Design Considerations__ will go over assumptions, constraints, dependencies, goals and guidelines that influenced the design of the model. __Architecture Design__ will include helpful diagrams with descriptions to visualize every part of the system's processes. __Detailed Design__ will then  go into more detail when it comes to each component making up the larger system. Following that, the document will address __Data Design__, __Interface Design__, __Security Considerations__, __Performance Considerations__, __Testing and Validation__ will be covered for completeness. Following that will be __Appendices__ containing additional information.
 
 ## 2. System Overview
 
-High-level description of the system architecture, components, and interactions.
+The system should consist of 6 different components.
+
+#### 1. Data import
+The data will be imported from kaggle using their Kaggle API, then downloaded locally as a CSV file, and enabling the model to interact with the data. This will enable my system to be updated with the latest information.
+#### 2. 
 
 ## 3. Design Considerations
 
@@ -112,7 +116,7 @@ Approach to test component interactions.
 
 ### 10.3 System Testing Strategy
 
-Approach to test the system as a whole.
+In order to test the system as a whole, I will use a smaller
 
 ## 11. Appendices
 
