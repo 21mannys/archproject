@@ -81,16 +81,29 @@ The system will be set up in such a way that everything is happening in a series
 
 ## 5. Detailed Design
 
-### 5.1 Module/Component 1
-	•	Purpose
-	•	Inputs/Outputs
-	•	Interfaces
-	•	Dependencies
-	•	Pseudocode or Logic Description
+### 5.1 Data Importing Module
+* **Purpose**
+  
+* **Inputs/Outputs**
+  
+* **Interfaces**
+  
+* **Dependencies**
+  
+* **Pseudocode or Logic Description**
+  
 
-### 5.2 Module/Component 2
-
-(Repeat as necessary for each module)
+### 5.2 Data Pre-Processing Module
+* **Purpose**
+  
+* **Inputs/Outputs**
+  
+* **Interfaces**
+  
+* **Dependencies**
+  
+* **Pseudocode or Logic Description**
+  
 
 ## 6. Data Design
 
