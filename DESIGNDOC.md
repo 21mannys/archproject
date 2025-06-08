@@ -77,15 +77,7 @@ In order to strengthen clear coding practice, the code should be modular, meanin
 
 ### 4.1 Overview
 
-Architectural diagram and description of system modules/components.
-
-### 4.2 Component Diagram(s)
-
-Show and describe major components and their relationships.
-
-### 4.3 Data Flow Diagrams
-
-Explain how data moves through the system.
+The system will be set up in such a way that everything is happening in a series, making it easy to manage and clear to observe and understand. Data will flow in, be processed in whatever way is deemed necessary, and used to either train or test, and then predictions can be made.
 
 ## 5. Detailed Design
 
@@ -108,7 +100,7 @@ ER diagrams, schemas, or data flow between components.
 
 ### 6.2 Data Storage
 
-Description of how and where data will be stored.
+Data will be stored locally. The processed data doesn't need to be saved in any permanent fashion since it'll only be used for training the model. The raw data and the trained models, however, will be stored in individual folders, likely named data and models respectively.
 
 ## 7. Interface Design
 
@@ -118,7 +110,16 @@ There is no plan for a user interface on this project, so it is not currently be
 
 ### 7.2 API Interfaces
 
-/List of APIs (endpoints, methods, parameters, responses)./
+The primary API in use for this project will be Kaggle API. It is used to download the raw dataset from Kaggle, which is updated daily. It can be accessed using the following block of code:
+```
+import kagglehub
+
+# Download latest version
+path = kagglehub.dataset_download("emrekaany/google-daily-stock-prices-2004-today")
+
+print("Path to dataset files:", path)
+```
+An API key is necessary in order to access it. This key will be stored within an external file related to the project.
 
 ## 8. Security Considerations
 
