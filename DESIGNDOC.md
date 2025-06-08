@@ -58,6 +58,12 @@ Following the model's training and testing, actual predictions will be made by t
 * The data found on Kaggle is accurate and consistent, meaning there are no errors.
 * The result of our accurate model will give us a decent idea of the stock's future.
 
+#### The dependencies I expect to use are:
+* Kaggle API: For pulling up to date data from Kaggle
+* Pandas: For handling data tables within Python
+* NumPy: For handling mathematical functions on data tables
+* Scikit-learn: For linear regression algorithms and evaluation tools
+
 ### 3.2 Constraints
 
 Identify design constraints (e.g., language, platform, performance, security).
