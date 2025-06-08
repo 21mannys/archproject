@@ -37,7 +37,7 @@ The rest of this document will explain the architechural design of my Google Soc
 
 ## 2. System Overview
 
-The system should consist of 6 different components.
+The system should consist of 5 different components.
 
 #### 1. Data Import
 The data will be imported from kaggle using their Kaggle API, then downloaded locally as a CSV file, and enabling the model to interact with the data. This will enable my system to be updated with the latest information.
@@ -46,12 +46,17 @@ This module will parse for missing data and categorize relevant features properl
 #### 3. Model Training
 In this module the data will be used to train the model. 80% of it will be used in order to train the data, and the other 20% will be used to test the data later. Using the training portion, we'll create a line of best fit using a linear regression algorithm and the training data.
 #### 4. Model Evaluation
-After the model's been trained, we can check its accuracy using our testing portion from earlier. 
+After the model's been trained, we can check its accuracy using our testing portion from earlier. The model's prediction will be tested against the data points not present in the training data to verify the model's correctness.
+#### 5. Prediction Module
+Following the model's training and testing, actual predictions will be made by the model. Asking the model to, for example, predict the following day's close based off of the current day's open will produce a result in line with our model's understanding of the data. The model can then be saved and utilized later if desired.
 ## 3. Design Considerations
 
 ### 3.1 Assumptions and Dependencies
 
-List any assumptions and external dependencies (hardware, third-party libraries, etc.).
+#### We can assume that:
+* It is reasonable to associate a linear relationship between the features of a stock price and the stock's price.
+* The data found on Kaggle is accurate and consistent, meaning there are no errors.
+* The result of our accurate model will give us a decent idea of the stock's future.
 
 ### 3.2 Constraints
 
