@@ -66,11 +66,12 @@ Following the model's training and testing, actual predictions will be made by t
 
 ### 3.2 Constraints
 
-Identify design constraints (e.g., language, platform, performance, security).
+* Language: Python
+* Performance: Training speed is negligible, but the prediction speed needs to be quick. No more than 3 seconds in ideal circumstances.
 
 ### 3.3 Goals and Guidelines
 
-Define specific goals or design guidelines (e.g., maintainability, scalability).
+In order to strengthen clear coding practice, the code should be modular, meaning it will be clear which methods and functions do what, and how they contribute to the larger system. This approach when writing code will make the final product easy to read for anyone. Another goal is to create a model with relatively accurate predictions. A RMSE of <5 dollars will tell us our model is relatively accurate given the data provided.
 
 ## 4. Architecture Design
 
