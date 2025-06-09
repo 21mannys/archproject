@@ -83,28 +83,27 @@ The system will be set up in such a way that everything is happening in a series
 
 ### 5.1 Data Importing Module
 * **Purpose**
-  
+  Reliably pull Google's stock price data via Kaggle
 * **Inputs/Outputs**
-  
+  Takes Kaggle API credentials, dataset path, and download destination as input
+  Returns raw data as output in the form of a csv file
 * **Interfaces**
-  
+  Kaggle API client library
 * **Dependencies**
+    * "kaggle" Python package
+    * "os" Python library
   
-* **Pseudocode or Logic Description**
-  
-
 ### 5.2 Data Pre-Processing Module
 * **Purpose**
-  
+  Preparing the raw data for training and testing the model.
 * **Inputs/Outputs**
-  
+  Takes the location of the raw data, a list of features (open, high, low, volume) for prediction, and the feature we're predicting (close) as input
+  Returns the data sorted by whether it will be used to test or train the model, and by feature (x or y)
 * **Interfaces**
-  
+  Pandas for reading the CSV
+  Scikit-learn for dividing data (train_test_split) and standardizing numbers (StandardScaler)
 * **Dependencies**
-  
-* **Pseudocode or Logic Description**
-  
-
+  "pandas", "numpy", and "scikit-learn" Python libraries
 ## 6. Data Design
 
 ### 6.1 Data Model
