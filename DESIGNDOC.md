@@ -82,27 +82,27 @@ The system will be set up in such a way that everything is happening in a series
 ## 5. Detailed Design
 
 ### 5.1 Data Importing Module
-* **Purpose**
-  Reliably pull Google's stock price data via Kaggle
-* **Inputs/Outputs**
-  Takes Kaggle API credentials, dataset path, and download destination as input
-  Returns raw data as output in the form of a csv file
-* **Interfaces**
-  Kaggle API client library
-* **Dependencies**
-    * "kaggle" Python package
-    * "os" Python library
+* **Purpose**<br/>
+  Reliably pull Google's stock price data via Kaggle<br/>
+* **Inputs/Outputs**<br/>
+  Takes Kaggle API credentials, dataset path, and download destination as input<br/>
+  Returns raw data as output in the form of a csv file<br/>
+* **Interfaces**<br/>
+  Kaggle API client library<br/>
+* **Dependencies**<br/>
+    * "kaggle" Python package<br/>
+    * "os" Python library<br/>
   
 ### 5.2 Data Pre-Processing Module
 * **Purpose**
   Preparing the raw data for training and testing the model.
-* **Inputs/Outputs**
-  Takes the location of the raw data, a list of features (open, high, low, volume) for prediction, and the feature we're predicting (close) as input
-  Returns the data sorted by whether it will be used to test or train the model, and by feature (x or y)
-* **Interfaces**
-  Pandas for reading the CSV
-  Scikit-learn for dividing data (train_test_split) and standardizing numbers (StandardScaler)
-* **Dependencies**
+* **Inputs/Outputs**<br/>
+  Takes the location of the raw data, a list of features (open, high, low, volume) for prediction, and the feature we're predicting (close) as input<br/>
+  Returns the data sorted by whether it will be used to test or train the model, and by feature (x or y)<br/>
+* **Interfaces**<br/>
+  Pandas for reading the CSV<br/>
+  Scikit-learn for dividing data (train_test_split) and standardizing numbers (StandardScaler)<br/>
+* **Dependencies**<br/>
   "pandas", "numpy", and "scikit-learn" Python libraries
 ## 6. Data Design
 
