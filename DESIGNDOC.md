@@ -107,12 +107,11 @@ The system will be set up in such a way that everything is happening in a series
 ## 6. Data Design
 
 ### 6.1 Data Model
-
-ER diagrams, schemas, or data flow between components.
+![6 1 Model drawio](https://github.com/user-attachments/assets/c306c2d9-2a03-4aff-906e-819fa043f43a)
 
 ### 6.2 Data Storage
 
-Data will be stored locally. The processed data doesn't need to be saved in any permanent fashion since it'll only be used for training the model. The raw data and the trained models, however, will be stored in individual folders, likely named data and models respectively.
+Data will be stored locally. The processed data doesn't need to be saved in any permanent fashion since it'll only be used for training the model. If necessary, however, it could be saved locally for the purpose of debugging possible issues in development. The raw data and the trained models, however, will be stored in individual folders, likely named data and models respectively.
 
 ## 7. Interface Design
 
