@@ -31,6 +31,7 @@ The project itself will be a linear regression model for stock market prediction
 [IBM - What is Linear Regression?](https://www.ibm.com/think/topics/linear-regression)<br/>
 [Kaggle API Documentation](https://www.kaggle.com/docs/api)<br/>
 [Scikit-learn User Guide (Linear Models)](https://scikit-learn.org/stable/modules/linear_model.html)<br/>
+[Towards Data Science - Treatign Linear Regression Like More Than Just a Black Box](https://towardsdatascience.com/treating-linear-regression-more-than-just-a-black-box-7053350f90e9/)  
 ### 1.5 Overview
 
 The rest of this document will explain the architechural design of my Google Sock Price Predictive Model. The __System Overview__ will outline the components that make up the system and how they interact with one another. __Design Considerations__ will go over assumptions, constraints, dependencies, goals and guidelines that influenced the design of the model. __Architecture Design__ will include helpful diagrams with descriptions to visualize every part of the system's processes. __Detailed Design__ will then  go into more detail when it comes to each component making up the larger system. Following that, the document will address __Data Design__, __Interface Design__, __Security Considerations__, __Performance Considerations__, __Testing and Validation__ will be covered for completeness. Following that will be __Appendices__ containing additional information.
@@ -115,7 +116,7 @@ Data will be stored locally. The processed data doesn't need to be saved in any 
 
 ## 7. Interface Design
 
-### 7.1 User Interface (if applicable)
+### 7.1 User Interface
 
 There is no plan for a user interface on this project, so it is not currently being considered.
 
@@ -138,19 +139,22 @@ Since this project will be hosted locally on a computer, security is of little c
 
 ## 9. Performance Considerations
 
-/Discuss expected performance and optimization strategies./
-
+Linear regression doesn't typically cost much resource wise, so performance should be of little issue. Regardless, there are still a few points where performance should be considered.
+* Training Speed  
+Given the size of the data set, training the model should be done in seconds. No unique optimizations should be necessary since NumPy and Scikit-learn are quick.
+* Prediction Speed  
+The prediction model uses linear regression, so any predictions being made should be done incredibly fast since we're utilizing a formula.
 ## 10. Testing and Validation
 
 ### 10.1 Unit Testing Strategy
 
-/Approach to test individual components./
+I plan to write inidividual test suites for the most important parts of the program.
+**Data Pre-processing:** Since we will be scaling the values and calculating new features based off of existing ones, it's important that we test to ensure everything is being changed consistently for the model to be accurate.  
+**Model Training:** In order to test scikit-learn's training function, I plan on using a small sample data set just to demonstrate a proper model can be produced with the features present in the dataset.  
+**Model Evaluation:** When the model is complete, I can input known values that are present in the dataset and ensure they have 0 margin for error (MSE, RMSE) to ensure the model calculates those values properly.  
+**Prediction:** The same method can be used for testing the prediction module. Simply providing known values and ensuring the model makes a correct prediction.
 
-### 10.2 Integration Testing Strategy
-
-/Approach to test component interactions./
-
-### 10.3 System Testing Strategy
+### 10.2 System Testing Strategy
 
 The full system once completed can be tested in a few ways.
 ##### 1. Full Run
@@ -158,6 +162,3 @@ Using the most up to date data, I will train and run the model, making sure it i
 
 ##### 2. Accuracy Check
 After the full run, I can observe the RMSE, which informs me of how much error the model is predicted to make, and ensure it's of a reasonable value.
-## 11. Appendices
-
-Any additional material, diagrams, or information.
