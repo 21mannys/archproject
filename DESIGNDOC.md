@@ -108,7 +108,7 @@ The system will be set up in such a way that everything is happening in a series
 ## 6. Data Design
 
 ### 6.1 Data Model
-![6 1 Model drawio](https://github.com/user-attachments/assets/c306c2d9-2a03-4aff-906e-819fa043f43a)
+![453236365-c306c2d9-2a03-4aff-906e-819fa043f43a](https://github.com/user-attachments/assets/845c1695-ae8b-4e8a-a02d-368e27626270)
 
 ### 6.2 Data Storage
 
